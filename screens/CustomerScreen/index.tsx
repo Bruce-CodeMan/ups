@@ -3,12 +3,28 @@
  * @Author: Bruce Hsu
  * @Description: 
  */
-import { SafeAreaView, ScrollView, Text } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { useLayoutEffect } from "react";
+import { ScrollView, Image } from "react-native";
 
 const CustomerScreen = () => {
+
+	const navigation = useNavigation()
+
+	useLayoutEffect(() => {
+		navigation.setOptions({
+			headerShown: false
+		})
+	}, [])
+
 	return (
-		<ScrollView>
-			<Text>CustomerScreen</Text>
+		<ScrollView className="bg-[#59C1CC]">
+			<Image 
+				source={{
+					uri: "https://links.papareact.com/3jc"
+				}}
+				className="h-64 w-full"
+			/>
 		</ScrollView>
 	)
 }
