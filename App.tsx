@@ -1,20 +1,17 @@
+/*
+ * @Date: 1985-10-26 16:15:00
+ * @Author: Bruce Hsu
+ * @Description: 
+ */
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text } from "react-native"
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View className='bg-red-300 flex-1'>
       <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
