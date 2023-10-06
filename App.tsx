@@ -3,15 +3,15 @@
  * @Author: Bruce Hsu
  * @Description: 
  */
-import { StatusBar } from 'expo-status-bar';
-import { View, Text } from "react-native"
+import { NavigationContainer } from "@react-navigation/native"
+import RootNavigator from "./navigator/RootNavigator";
+
 
 export default function App() {
   return (
-    <View className='bg-red-300 flex-1'>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+		<NavigationContainer>
+			<RootNavigator />
+		</NavigationContainer>
   );
 }
 
